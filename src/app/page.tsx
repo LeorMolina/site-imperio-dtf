@@ -2,8 +2,12 @@ import Image from "next/image";
 import { Phone, CheckCircle, Shirt, Truck, Palette, ArrowRight, Sun, Wind, ScanFace, ShoppingBag, Leaf, Layers } from "lucide-react";
 
 export default function Home() {
-  // Link do WhatsApp
-  const whatsappLink = "https://wa.me/5515999999999?text=Olá,%20vi%20o%20site%20e%20quero%20um%20orçamento%20de%20DTF!";
+  // Link do WhatsApp (ATUALIZADO)
+  const whatsappLink = "https://wa.me/55159991017676?text=Olá,%20vi%20o%20site%20e%20quero%20um%20orçamento%20de%20DTF!";
+
+  // Links Sociais
+  const instagramLink = "https://www.instagram.com/imperiodtfprint/?hl=pt-br";
+  const mapsLink = "https://maps.app.goo.gl/LdWujHqCKbYKT1Q48"; // Link fornecido
 
   return (
     <main className="min-h-screen bg-white font-sans text-slate-900 selection:bg-imperio-gold selection:text-imperio-black">
@@ -26,6 +30,8 @@ export default function Home() {
           {/* Botão Desktop */}
           <a 
             href={whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden md:flex bg-imperio-black hover:bg-gray-900 text-imperio-gold font-bold py-2 px-6 rounded-full transition-all transform hover:scale-105 items-center gap-2 shadow-lg"
           >
             <Phone size={18} />
@@ -59,6 +65,8 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <a 
                 href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center justify-center gap-3 bg-imperio-gold hover:bg-imperio-goldLight text-imperio-black font-extrabold text-lg py-4 px-8 rounded-xl shadow-[0_0_30px_rgba(212,175,55,0.3)] transition-all transform hover:-translate-y-1"
               >
                 <Phone size={24} />
@@ -76,7 +84,7 @@ export default function Home() {
           {/* Mockup Visual (DIREITA) */}
           <div className="md:w-1/2 flex justify-center z-10 relative">
             <div className="relative w-full max-w-md aspect-square rounded-3xl border border-white/10 shadow-2xl overflow-hidden group">
-              {/* --- MUDANÇA AQUI: AGORA PUXA DO ARQUIVO LOCAL /capa.jpg --- */}
+              {/* IMAGEM CAPA LOCAL */}
               <Image 
                 src="/capa.jpg" 
                 alt="Camiseta Personalizada DTF" 
@@ -160,24 +168,23 @@ export default function Home() {
               </div>
               <div className="mt-10">
                  {/* BOTÃO PRETO */}
-                 <a href={whatsappLink} className="inline-flex items-center gap-2 bg-black text-white px-8 py-4 rounded-xl font-bold hover:bg-zinc-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                 <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-black text-white px-8 py-4 rounded-xl font-bold hover:bg-zinc-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                     Fazer meu pedido agora 
                     <ArrowRight size={20} />
                  </a>
               </div>
             </div>
 
-            {/* Lado Direito: Imagem Única (ESTILO IGUAL ECOBAG: FUNDO BRANCO, BORDA CLARA) */}
+            {/* Lado Direito: Imagem Única */}
             <div className="md:w-1/2 relative">
                <div className="aspect-[4/3] bg-white rounded-3xl overflow-hidden shadow-2xl relative border border-gray-100 group">
-                 {/* IMAGEM VISEIRA */}
+                 {/* IMAGEM VISEIRA LOCAL */}
                  <Image 
                    src="/viseira-preta.jpg" 
                    alt="Viseira Esportiva Premium" 
                    fill 
                    className="object-cover group-hover:scale-105 transition-transform duration-700" 
                  />
-                 {/* Overlay igual da Ecobag */}
                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                </div>
                {/* Card Flutuante */}
@@ -203,9 +210,10 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center gap-16">
             
-            {/* Lado Esquerdo: Imagem (JÁ ESTAVA NO ESTILO CERTO) */}
+            {/* Lado Esquerdo: Imagem */}
             <div className="md:w-1/2 relative">
                <div className="aspect-[4/3] bg-white rounded-3xl overflow-hidden shadow-2xl relative border border-gray-100 group">
+                 {/* IMAGEM ECOBAG LOCAL */}
                  <Image src="/ecobag.jpg" alt="Ecobag Brim Pesado" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                </div>
@@ -248,7 +256,7 @@ export default function Home() {
               </div>
               <div className="mt-10">
                  {/* BOTÃO PRETO */}
-                 <a href={whatsappLink} className="inline-flex items-center gap-2 bg-black text-white px-8 py-4 rounded-xl font-bold hover:bg-zinc-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                 <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-black text-white px-8 py-4 rounded-xl font-bold hover:bg-zinc-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                     Fazer meu pedido agora 
                     <ArrowRight size={20} />
                  </a>
@@ -286,24 +294,23 @@ export default function Home() {
               </div>
               <div className="mt-12">
                  {/* BOTÃO PRETO */}
-                 <a href={whatsappLink} className="inline-flex items-center gap-2 bg-black text-white px-8 py-4 rounded-xl font-bold hover:bg-zinc-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                 <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-black text-white px-8 py-4 rounded-xl font-bold hover:bg-zinc-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                     Fazer meu pedido agora 
                     <ArrowRight size={20} />
                  </a>
               </div>
             </div>
 
-            {/* Lado Direito: Imagem (ESTILO IGUAL ECOBAG: FUNDO BRANCO, BORDA CLARA) */}
+            {/* Lado Direito: Imagem */}
             <div className="md:w-1/2 relative">
                <div className="aspect-[4/3] bg-white rounded-2xl overflow-hidden shadow-2xl relative border border-gray-100 group">
-                 {/* FOTO REAL */}
+                 {/* FOTO REAL LOCAL */}
                  <Image 
                    src="/como-funciona.jpg" 
                    alt="Processo de Produção DTF" 
                    fill 
                    className="object-cover group-hover:scale-105 transition-transform duration-700" 
                  />
-                 {/* Overlay igual da Ecobag */}
                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
                </div>
                <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-xl border border-gray-100 max-w-xs">
@@ -332,9 +339,9 @@ export default function Home() {
               <p className="text-sm max-w-xs">A tecnologia que faltava para sua marca brilhar.</p>
             </div>
             <div className="flex gap-6 text-sm font-medium">
-              <a href="#" className="hover:text-imperio-gold transition-colors">Instagram</a>
-              <a href="#" className="hover:text-imperio-gold transition-colors">WhatsApp</a>
-              <a href="#" className="hover:text-imperio-gold transition-colors">Localização</a>
+              <a href={instagramLink} target="_blank" rel="noopener noreferrer" className="hover:text-imperio-gold transition-colors">Instagram</a>
+              <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="hover:text-imperio-gold transition-colors">WhatsApp</a>
+              <a href={mapsLink} target="_blank" rel="noopener noreferrer" className="hover:text-imperio-gold transition-colors">Localização</a>
             </div>
           </div>
           <div className="mt-12 pt-8 border-t border-white/5 text-center text-xs text-gray-600">
@@ -346,6 +353,8 @@ export default function Home() {
       {/* --- BOTÃO FLUTUANTE (Mobile) --- */}
       <a 
         href={whatsappLink}
+        target="_blank"
+        rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20bd5a] text-white p-4 rounded-full shadow-[0_4px_20px_rgba(37,211,102,0.4)] transition-all hover:scale-110 hover:-translate-y-1 animate-bounce md:hidden"
         aria-label="Falar no WhatsApp"
       >
