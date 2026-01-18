@@ -1,13 +1,16 @@
 import Image from "next/image";
-import { Phone, CheckCircle, Shirt, Truck, Palette, ArrowRight, Sun, Wind, ScanFace, ShoppingBag, Leaf, Layers } from "lucide-react";
+import { Phone, CheckCircle, Truck, Palette, ArrowRight, Sun, Wind, ScanFace, ShoppingBag, Leaf, Layers, Star, Quote } from "lucide-react";
 
 export default function Home() {
-  // Link do WhatsApp (ATUALIZADO)
-  const whatsappLink = "https://wa.me/55159991017676?text=Olá,%20vi%20o%20site%20e%20quero%20um%20orçamento%20de%20DTF!";
+  // --- CONFIGURAÇÕES DE CONTATO ---
+  const whatsappNumber = "55159991017676";
+  const whatsappMsg = "Olá, vi o site e quero um orçamento de DTF!";
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMsg)}`;
 
   // Links Sociais
   const instagramLink = "https://www.instagram.com/imperiodtfprint/?hl=pt-br";
-  const mapsLink = "https://maps.app.goo.gl/LdWujHqCKbYKT1Q48"; // Link fornecido
+  // Link Inteligente de Busca no Maps
+  const mapsLink = "https://maps.app.goo.gl/LdWujHqCKbYKT1Q48";
 
   return (
     <main className="min-h-screen bg-white font-sans text-slate-900 selection:bg-imperio-gold selection:text-imperio-black">
@@ -110,6 +113,7 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
+            {/* Card 1 */}
             <div className="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-imperio-gold/30">
               <div className="w-16 h-16 bg-imperio-gold/10 rounded-2xl flex items-center justify-center mb-6 text-imperio-gold group-hover:bg-imperio-gold group-hover:text-black transition-colors">
                 <Palette size={32} />
@@ -118,6 +122,7 @@ export default function Home() {
               <p className="text-gray-600 leading-relaxed">Degradês, fotos e artes complexas. Imprimimos exatamente o que você vê na tela.</p>
             </div>
 
+            {/* Card 2 */}
             <div className="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-imperio-gold/30">
               <div className="w-16 h-16 bg-imperio-black/5 rounded-2xl flex items-center justify-center mb-6 text-imperio-black group-hover:bg-imperio-black group-hover:text-white transition-colors">
                 <CheckCircle size={32} />
@@ -126,6 +131,7 @@ export default function Home() {
               <p className="text-gray-600 leading-relaxed">Pode esticar e lavar na máquina. A tinta ancora na fibra do tecido e não racha.</p>
             </div>
 
+            {/* Card 3 */}
             <div className="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-imperio-gold/30">
               <div className="w-16 h-16 bg-imperio-gold/10 rounded-2xl flex items-center justify-center mb-6 text-imperio-gold group-hover:bg-imperio-gold group-hover:text-black transition-colors">
                 <Truck size={32} />
@@ -326,6 +332,36 @@ export default function Home() {
                </div>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* --- PROVA SOCIAL (AGORA NO FINAL) --- */}
+      <section className="py-20 bg-gray-50 border-t border-gray-200">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <span className="text-imperio-gold font-bold tracking-widest text-sm uppercase mb-2 block">Depoimentos</span>
+            <h2 className="text-3xl font-bold text-imperio-black">Quem usa, <span className="text-imperio-gold">Recomenda</span>.</h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { nome: "Marcos Silva", empresa: "Academia Fit", texto: "A qualidade da estampa surpreendeu. O toque é muito macio e as cores ficaram vivas mesmo depois de lavar." },
+              { nome: "Ana Paula", empresa: "Eventos SP", texto: "Precisava de 50 camisetas para ontem e a Império salvou meu evento. Entrega super rápida e atendimento top!" },
+              { nome: "Ricardo Oliveira", empresa: "Marca Própria", texto: "Já testei várias estamparías, mas o DTF da Império é outro nível. Minha marca agora tem acabamento profissional." }
+            ].map((item, index) => (
+              <div key={index} className="bg-white p-8 rounded-2xl relative border border-gray-100 hover:shadow-lg transition-all">
+                <Quote className="absolute top-6 right-6 text-imperio-gold/20" size={40} />
+                <div className="flex gap-1 text-imperio-gold mb-4">
+                  {[...Array(5)].map((_, i) => <Star key={i} size={16} fill="currentColor" />)}
+                </div>
+                <p className="text-gray-600 mb-6 italic">"{item.texto}"</p>
+                <div>
+                  <p className="font-bold text-imperio-black">{item.nome}</p>
+                  <p className="text-xs text-gray-400 font-bold uppercase">{item.empresa}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
