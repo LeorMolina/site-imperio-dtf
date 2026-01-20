@@ -31,7 +31,9 @@ export const metadata: Metadata = {
     ],
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "/icon.png", // Agora aponta para o arquivo que existe na sua pasta public
+    shortcut: "/icon.png",
+    apple: "/icon.png", // Faz funcionar também no iPhone
   }
 };
 
