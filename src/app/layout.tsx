@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/opengraph-image.png", // Salve uma imagem com este nome na pasta public (1200x630px)
+        url: "/opengraph-image.png", 
         width: 1200,
         height: 630,
         alt: "Império DTF Print - Capa",
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
     ],
   },
   icons: {
-    icon: "/icon.png", // Agora aponta para o arquivo que existe na sua pasta public
+    icon: "/icon.png", 
     shortcut: "/icon.png",
-    apple: "/icon.png", // Faz funcionar também no iPhone
+    apple: "/icon.png",
   }
 };
 
