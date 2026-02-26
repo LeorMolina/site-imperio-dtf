@@ -6,7 +6,7 @@ import { Phone, CheckCircle, Truck, Palette, ArrowRight, Sun, Wind, ScanFace, Sh
 
 export default function Home() {
   // --- CONFIGURAÇÕES DE CONTATO ---
-  const whatsappNumber = "55159991017676";
+  const whatsappNumber = "+5515988265129";
   const whatsappMsg = "Olá, vi o site e quero um orçamento de DTF!";
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMsg)}`;
   const instagramLink = "https://www.instagram.com/imperiodtfprint/?hl=pt-br";
